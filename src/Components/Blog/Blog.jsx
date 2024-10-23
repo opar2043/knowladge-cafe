@@ -13,9 +13,9 @@ const Blog = ({blog , handelBookMark , handleReadingTime}) => {
   return (
     <div className="py-4 border-b shadow rounded mb-3 px-2">
         <img src={cover} alt="" className="w-full" />
-        <div className="flex justify-between p-3 items-center">
+        <div className="flex justify-between p-2 py-4 items-center flex-col md:flex-row">
 
-            <div className="w-30 flex justify-center gap-2 items-center py-2">
+            <div className="w-30 flex  justify-center gap-2 items-center py-2">
                 <img src={author_img} alt="" className=" w-12 rounded-full" />
                 <div>
                     <h3 className="text-lg font-semibold">{author}</h3>
@@ -25,7 +25,7 @@ const Blog = ({blog , handelBookMark , handleReadingTime}) => {
 
             <div className="flex gap-1">
                  <span className="text-sm text-gray-700 font-semibold">{reading_time } min ago</span>
-                 <button className="text-xl text-red-600" onClick={()=>handelBookMark(blog)}><IoBookmark></IoBookmark></button>
+                 <button className="text-2xl text-red-600" onClick={()=>handelBookMark(blog)}><IoBookmark></IoBookmark></button>
             </div>
 
         </div>
